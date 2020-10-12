@@ -1,33 +1,29 @@
 import React from 'react';
-import './main.scss'
+import './form.scss'
 var method = 'get'
-class Main extends React.Component {
+class Form extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = {
-            results: '',
-            url: '',
-            method: ''
-        };
+      super(props);
+      this.state = { 
+        url: '',
+        method:'',
+        results:[],
+      };
     }
-    handelInput = (e) => {
-        const url = e.target.value;
-        console.log(e.target.value);
-        this.setState({ url });
-    };
-    handleMethod = (e) => {
-        method = e.target.value;
-        console.log("method from select", method, e.target.value);
-        //  this.setState({ method });
-
+    handelInput = (event) => {
+      let url = event.target.value;
+      console.log('event.target.value > url',event.target.value);
+      this.setState({ url }); //rerender
     }
-    handleClick =async (e)  => {
-        const results = this.state.url;
-        this.setState({ results, method });
-        let raw = await fetch(this.state.url);
-        let data = await raw.json();
-        console.log(data)
-    };
+    handleMethod = (e)=>{
+       method = e.target.value;
+      console.log('method from select',method,e.target.value);
+      this.setState({ method });
+    }
+    handleClick = () =>{
+      this.props.handelUpdate(this.state.url);
+      this.setState({ url: '' });
+    }
 
 
     render() {
@@ -48,12 +44,9 @@ class Main extends React.Component {
                     <input type="radio" id="delete" name="method" value="delete" />
                     <label htmlFor="delete">DELETE</label>
                 </form>
-                <div id="result">
-                    <p>{this.state.method} {this.state.results}</p>
-                </div>
             </main>
         );
     }
 }
 
-export default Main;
+export default Form;
