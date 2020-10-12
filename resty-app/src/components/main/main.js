@@ -4,10 +4,11 @@ var method = 'get'
 class Main extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { results: '', 
-        url: '', 
-        method: '' 
-    };
+        this.state = {
+            results: '',
+            url: '',
+            method: ''
+        };
     }
     handelInput = (e) => {
         const url = e.target.value;
@@ -20,9 +21,12 @@ class Main extends React.Component {
         //  this.setState({ method });
 
     }
-    handleClick = (e) => {
+    handleClick =async (e)  => {
         const results = this.state.url;
         this.setState({ results, method });
+        let raw = await fetch(this.state.url);
+        let data = await raw.json();
+        console.log(data)
     };
 
 
