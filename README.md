@@ -1,4 +1,3 @@
-
 # Resty
 
 - A browser based API testing tool
