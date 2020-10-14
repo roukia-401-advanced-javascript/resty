@@ -6,6 +6,8 @@ import Form from './components/form/form';
 import Footer from './components/footer/footer';
 import Header from './components/header/header.js';
 import Results from './components/results/results.js';
+import History from './components/history/history';
+
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -13,30 +15,38 @@ class App extends React.Component {
       count:0,
       results: [],
       headers: [],
+      // results: null,
+      // headers:'',
     };
   }
   // url.......  https://swapi.dev/api/people/
-  handelUpdate = async (url)=> {
-    console.log('url from app.js ', url);
-    let raw = await fetch(url);
+
+  // came from child form with parameters url and option 
+  handelUpdate = async (url,options)=> {
+    // console.log('url from app.js ', url);
+    let raw = await fetch(url,options);
+    console.log("this is raaaw".raw)
     let data = await raw.json();
-    this.setState({headers: raw.headers, results: data.results, count: data.count });
+    console.log("this is data after fetch",data)
+    console.log("this is raaaw.headeeers",raw.headers)
+    let headers={};
+    raw.headers.forEach( (value, key) => {
+      headers[key] = value;
+
+    });
+    
+    this.setState({headers: headers, results: data.results, count: data.count });
   };
 
-  // "headers": {},
-  // "count": 82,
-  // "results": [
-
-
-    // "count": 82,
-    // "results": [
-    //      {
+ 
   render() {
     return (
       <React.Fragment>
         <Header />
         <Form handelUpdate={this.handelUpdate}/>
         <Results headers={this.state.headers} count={this.state.count} results={this.state.results} />
+        {/* // i can use anything inside handleupdate in the history child by the props */}
+        <History fetchData={this.handelUpdate}/> 
         <Footer />
       </React.Fragment>
     );
