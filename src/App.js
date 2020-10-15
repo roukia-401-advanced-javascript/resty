@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Form from './components/form/form';
 import Footer from './components/footer/footer';
 import Header from './components/header/header.js';
 import Results from './components/results/results.js';
-
-import If from './components/if/if';
-
+import Help from './components/help/help.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -34,18 +32,32 @@ class App extends React.Component {
   };
   render() {
     return (
-      <React.Fragment>
+      <BrowserRouter>
         <Header />
-        <Form loading={this.state.loading} handelUpdate={this.handelUpdate.bind(this)} toggle={this.toggleLoading.bind(this)} />
-        {/* <If condition={this.state.results}> */}
-        <Results loading={this.state.loading} headers={this.state.headers} count={this.state.count} results={this.state.results} />
-        {/* </If> */}
+
+        <Switch>
+          <Route exact path="/">
+            <Form loading={this.state.loading} handelUpdate={this.handelUpdate.bind(this)} toggle={this.toggleLoading.bind(this)} />
+            <Results loading={this.state.loading} headers={this.state.headers} count={this.state.count} results={this.state.results} />
+          </Route>
+
+          <Route exact path="/history">
+            <div>This is history page </div>
+          </Route>
+
+          <Route exact path="/help">
+            <Help />
+          </Route>
+
+        </Switch>
+
         <Footer />
-      </React.Fragment>
+      </BrowserRouter>
     );
   }
 }
 
 export default App;
+
 
 

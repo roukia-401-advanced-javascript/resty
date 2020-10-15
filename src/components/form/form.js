@@ -70,7 +70,7 @@ class Form extends React.Component {
     // send count, results, headers from child (form) to parent (app)
     this.props.handelUpdate(count, results, headers);
     // {this.props.loading == true} ? {this.props.loading = false} : {this.props.loading = false}
-    this.props.loading == true ? this.props.toggle() : console.log("loading")
+    this.props.loading === true ? this.props.toggle() : console.log("loading")
 
   }
 
