@@ -1,12 +1,20 @@
 import React from 'react';
+import './help.scss';
 function Help() {
 
   return (
     <>
-      <h3>welcome to help page </h3>
-      <p>To run the application you need to <br/>
-        enter the url and choose the method and add the body for put and post methods and click the go button
-      </p>
+      <h2 id = "h2Help">Welcome To Help Page </h2>
+      <h3 id = "h3Help">Here are the steps to run the Resty application:</h3>
+
+      <ol class="d">
+        <li class = "helpList">Enter url</li>
+        <li  class = "helpList"> choose the method</li>
+        <li  class = "helpList">Enter the body if required</li>
+        <li  class = "helpList">Press Go button</li>
+        <li  class = "helpList">View the Results</li>
+      </ol>
+
     </>
   );
 }

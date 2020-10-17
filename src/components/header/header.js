@@ -7,7 +7,7 @@ const Header = () => {
       <header>
         <h1> RESTy</h1>
         <nav className='nav'>
-        <ul>
+        <ul className = "ulHeader">
         <li>
             <Link to="/">Home</Link>
           </li>

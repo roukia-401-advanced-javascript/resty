@@ -1,0 +1,31 @@
+#historySection{
+   
+width: 700px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 73px;
+margin-top: 60px;
+height: 100%;
+border: 2px solid #ccc;
+border-radius: 4px;
+background-color: #f8f8f8;
+resize: none;
+}
+#historyUrl{
+    font-family: monospace;
+   color: cadetblue;
+   font-family: cursive;
+   font-weight: bold;
+   
+}
+#historyUrl:hover{
+    color:#2f686a;
+}
+#historyMethodButton{
+    margin: 25px;
+}
+#urlHistoryHeader{
+    font-family: cursive;
+    color: #2f686a;
+    font-size: 26px;
+}
