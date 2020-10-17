@@ -25,7 +25,9 @@
 
 ## deployment link
 
-[deployment link](https://roukia-401-advanced-javascript.github.io/resty/)
+[github](https://roukia-401-advanced-javascript.github.io/resty/)
+[Netlify](https://roukia-resty.netlify.app/)
+
 
 
 ## UML
