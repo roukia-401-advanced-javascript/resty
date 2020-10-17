@@ -12,17 +12,20 @@ background-color: #f8f8f8;
 resize: none;
 }
 #historyUrl{
-    font-family: monospace;
    color: cadetblue;
    font-family: cursive;
-   font-weight: bold;
+   display: inline;
    
 }
 #historyUrl:hover{
-    color:#2f686a;
-}
+    cursor: auto;
+  }
+
 #historyMethodButton{
     margin: 25px;
+}
+button:hover{
+    cursor: pointer;
 }
 #urlHistoryHeader{
     font-family: cursive;
