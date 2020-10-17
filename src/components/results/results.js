@@ -5,7 +5,9 @@ import ReactJson from 'react-json-view';
 class Results extends React.Component {
   constructor(props) {
     super(props);
-    
+    this.state = {
+    };
+
   }
 
   render() {
