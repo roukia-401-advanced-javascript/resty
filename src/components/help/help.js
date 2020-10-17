@@ -13,6 +13,7 @@ function Help() {
         <li  class = "helpList">Enter the body if required</li>
         <li  class = "helpList">Press Go button</li>
         <li  class = "helpList">View the Results</li>
+        <li  class = "helpList">View all your history urls: Go to the history page and press the method button to view its results again </li>
       </ol>
 
     </>
