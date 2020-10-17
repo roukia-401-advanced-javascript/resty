@@ -8,18 +8,18 @@ class Results extends React.Component {
   }
 
   render() {
-
-    ////theme="Adventure Time" 
-    // console.log('this.proops from result.js >>>>>>>>>', this.props);
     return (
       <section>
-        <If condition={!this.props.loading}>
+      {/* // my loading now is true go to else and show the theme then continue and back to the code after handleupdate */}
+        <If condition={!this.props.loading}> 
           <Then>
+            {/* // display the results */}
             <ReactJson src={this.props} theme="monokai" />
 
 
           </Then>
           <Else>
+            {/* display the theme */}
 
             <div className="about">
               <a className="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">

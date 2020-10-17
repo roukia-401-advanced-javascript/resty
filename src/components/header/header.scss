@@ -8,5 +8,30 @@ h1{
     margin-top: 0;
     padding: 17px;
     font-size: 39px;
-    font-family: ui-sans-serif;
+    font-family: cursive;
+}
+
+li{
+  display: inline;
+  margin-bottom: 50px;
+  // color: aliceblue;
+  font-size: 20px;
+}
+li:hover{
+  cursor: pointer;
+
+}
+.nav a{
+  color: aliceblue;
+  padding-right:10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 60px;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.ulHeader{
+  text-align: center;
+  padding-bottom: 20px;
 }
