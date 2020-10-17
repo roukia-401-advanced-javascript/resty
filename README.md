@@ -33,10 +33,6 @@
 
 ## UML
 
-### lab-26
+![UML](/assets/class-29-uml.JPG)
 
-![UML](/assets/class-26-uml.JPG)
 
-### lab-27
-
-![UML](/assets/class-27-uml.JPG)
