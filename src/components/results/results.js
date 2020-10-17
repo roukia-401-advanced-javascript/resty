@@ -14,8 +14,9 @@ class Results extends React.Component {
         <If condition={!this.props.loading}> 
           <Then>
             {/* // display the results */}
+            <div data-testid="results">
             <ReactJson src={this.props} theme="monokai" />
-
+            </div>
 
           </Then>
           <Else>
